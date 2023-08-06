@@ -1,0 +1,212 @@
+/*layout*/
+    /*style*/
+    
+    /* Debug */
+
+
+html{
+    background-color: lightpink
+}
+
+
+body{
+    margin: 0;
+    width: 1000 px;
+    
+}
+
+h2{
+    padding: 20px;
+    margin: 0;
+    animation: SlideIn 1.6s;
+}
+@keyframes SlideIn {
+    0% {
+      opacity: 0;/*初期状態では透明に*/
+      transform: translateX(64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+/* ヘッダー */
+header{
+    height: 70px;
+    width: 100%;
+    /*layout*/
+    position:fixed;
+    top: 0;
+    z-index:10000 ;
+    /*style*/
+    background-color: brown;
+    color: azure;
+}
+#headerDiv{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex : 1;
+}
+
+
+h1{
+    margin: 10px;
+}
+
+nav{
+    height: 70px;
+    width: 100%;
+    margin: 0 auto;
+    /*style*/
+    /* background-color: white;
+    color: black; */
+
+}
+
+#headersnav{
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    
+}
+
+li{
+    /*layout*/
+    flex : 1;
+    text-align: center;
+    height: 70px;
+    margin: 0 auto;
+    display: block;
+    
+    /*style*/
+    font-size: 20px;
+    
+    /* Debug */
+    /* padding: 10px 20px; */
+    color: #3e3d3c;
+    border-bottom: 5px solid transparent;
+    border: black;
+
+}
+
+
+li:hover{
+    background-color: rgb(187, 107, 107);
+    color: aliceblue;
+    height: 65px;
+    border-bottom: 5px solid transparent;
+    border-color: azure;
+}
+
+
+a.navlist{
+    display: block;
+    height: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: azure;
+}
+
+/* トップイメージ */
+
+
+#TopImageBox{
+    width: 1000px ;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+#TopImage{
+    width: 100%;
+    height: 400Px;
+}
+
+/* ■メインコンテンツ■ */
+main{
+    width: 1000px;
+    margin: 0 auto;
+    
+    background-color: white;
+}
+
+#onboarding1{
+    display: flex ;
+    flex: 1;
+    flex-direction: row;
+}
+
+.onboarding_photo{
+    height: 300px;
+    width: 400px;
+}
+
+.onboarding_textbox{
+    padding-left: 20px;
+}
+.onboarding_text{
+    /* margin-left: 20px; */
+}
+
+
+/* ポートフォリオ */
+#portfolio_box{
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    background-color: rgb(185, 183, 183);
+}
+
+#portfolio_listing_box{
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio{
+
+}
+
+/* フッター */
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: brown;
+    margin: 0 auto;
+}
+
+
+
+.roundButton{
+
+    width: auto;
+    border-radius: 10px;
+
+    padding: 10px;
+    margin: 0 auto;
+    position : absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+
+
+    color: azure;
+    font-size: 20pt;
+    background-color: brown;
+}
+
+.roundButton:hover{
+    background-color: rgb(187, 107, 107);
+    color: aliceblue;
+    border-color: azure;
+}
