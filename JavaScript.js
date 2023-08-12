@@ -21,4 +21,19 @@ var currentImage =0 ;
 setInterval(changeImage,5000) ;
 
 
-// ■トップイメージのスライドショー■
+// ■トップイメージのスライドショー終了■
+
+//■スライドイン■
+jQuery(function ($) {
+    var fadeIn = $('.scroll-fade-side');
+    $(window).on('scroll', function () {
+      $(fadeIn).each(function () {
+        var offset = $(this).offset().top;
+        var scroll = $(window).scrollTop(); 
+        var windowHeight = $(window).height();
+        if (scroll > offset - windowHeight + 150) {
+          $(this).addClass("scroll-in");
+        }
+      });
+    });
+  });
