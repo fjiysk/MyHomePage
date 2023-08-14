@@ -13,6 +13,7 @@ html{
 body{
     margin: 0 auto;
     width: 100%;
+    z-index: -100;
 }
 
 h2{
@@ -47,6 +48,12 @@ header{
     background-color: brown;
     color: azure;
 }
+
+#header_hide{
+    height: 70px;
+    width: 100%;
+}
+
 #headerDiv{
     max-width: 100%;
     margin: auto;
@@ -130,12 +137,13 @@ a.navlist{
 }
 .hamburger_icon{
     display: none;
-    height: 60px;
+    height: 75px;
     width: auto;
     margin: 0 0 0 0;
-    padding-bottom: 10px;
     font-size: 60px;
     font-weight: 80;
+    text-align: center;
+    line-height: 75px;
 }
 @media screen and (max-width: 500px) {
     header{
@@ -161,12 +169,14 @@ a.navlist{
         position: absolute;
         top: -300px;
         left: 0px;
+        padding: 0;
     }
     .hamburger_icon{
         display: block;
         position: absolute;
         top: 0;
-        right: 50px;
+        right: 0;
+
     }
     input[type="checkbox"]:checked ~ #header_nav_list{
         width: 100%;
@@ -242,10 +252,10 @@ footer{
 
 /* ■メインコンテンツ■ */
 main{
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
-    
     background-color: white;
+    z-index: -10;
 }
 
 #onboarding1{
@@ -332,6 +342,17 @@ main{
     background-color: bisque;
 }
 
+.card{
+    width: 250px;
+    height: 300px;
+    margin: 20px 0;
+    background-color: bisque;
+}
+.card_img{
+    width: 250px;
+    height: auto;
+}
+
 .roundButton{
 
     width: auto;
@@ -403,9 +424,73 @@ main{
     opacity: 1;
     transform: translate(0, 0);
 }
+
+@media screen and (max-width: 500px){
+    .sideIn_up   {transform: translate(  0px,  70px);}
+    .sideIn_down {transform: translate(  0px, -70px);}
+    .sideIn_right{transform: translate(  0px,  70px);}
+    .sideIn_left {transform: translate(  0px, -70px);}
+
+}
 /* ■スライドイン終了■ */
 
 
 /* ■レスポンシブ　スマホ向けサイト■ */
 
 /* ■レスポンシブ　スマホ向けサイト 終了■ */
+
+
+/* プロフィールページ */
+#profileBox{
+    width: 100%;
+    height: 500px;
+    padding-top: 70px;
+    display: flex;
+    flex-direction : row;
+    z-index: -10;
+    display: none;
+}
+
+#profileBox1{
+
+    width: calc(50%);
+	height: 500px;
+	background: red;
+    z-index: 0;
+}
+#profileBox1::before{
+    content: "";
+    position: absolute;
+    left: calc(50% - 50px);
+    width: 50px;
+    height: 500px;
+	background: #e7d2d2;
+    transform: skewX(11.3deg);
+    z-index: 3;
+}
+
+#profileBox2{
+    width: calc(50%);
+	height: 500px;
+	background: #6011c7;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+#profileBox2::before{
+    content: "";
+    position: absolute;
+    left: calc(- 25px);
+    width: 50px;
+    height: 500px;
+	background: #0c0101;
+    transform: skewX(11.3deg);
+    z-index: 1;
+}
+
+#profile_history{
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+
+}

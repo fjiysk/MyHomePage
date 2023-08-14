@@ -19,8 +19,6 @@ var topImageList = ["Image/SlideShow001.JPG","Image/SlideShow002.JPG","Image/Sli
 
 var currentImage =0 ;
 setInterval(changeImage,5000) ;
-
-
 // ■トップイメージのスライドショー終了■
 
 //■スライドイン■
